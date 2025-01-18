@@ -5,7 +5,7 @@ services:
         image: mysql:8.0.16
         container_name: servatrice_mysql
         ports:
-            - 3905
+            - 3306
         command: --sql_mode=
         environment:
             - MYSQL_ROOT_PASSWORD=root-password
