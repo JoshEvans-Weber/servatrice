@@ -32,7 +32,7 @@ services:
         volumes:
                 - ./Servatrice:/root/.local/share/Cockatrice/Servatrice/servatrice.ini
                 - ./logs:/var/logs/Servatrice
-            - bind:
+            - type: bind
                 - source: ./Servatrice
                 - target: /root/.local/share/Cockatrice/Servatrice/servatrice.ini
         restart: unless-stopped
