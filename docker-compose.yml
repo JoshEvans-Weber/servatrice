@@ -19,7 +19,6 @@ services:
         logging:
             options:
                 max-size: 10m
-
     servatrice:
         image: saadbruno/servatrice:2.8.0
         container_name: servatrice_server
