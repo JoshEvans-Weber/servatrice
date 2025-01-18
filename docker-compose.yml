@@ -13,10 +13,10 @@ services:
             - MYSQL_USER=servatrice
             - MYSQL_PASSWORD=password
         volumes:
-        - ./mysql/mount:/var/lib/mysql
-        - type: bind
-            source: ./mysql/schema/servatrice.sql
-            target: /docker-entrypoint-initdb.d/servatrice.sql
+            - ./mysql/mount:/var/lib/mysql
+            - type: bind
+                source: ./mysql/schema/servatrice.sql
+                target: /docker-entrypoint-initdb.d/servatrice.sql
 
         restart: unless-stopped
         logging:
