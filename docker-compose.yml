@@ -33,8 +33,8 @@ services:
                 - ./Servatrice:/root/.local/share/Cockatrice/Servatrice/servatrice.ini
                 - ./logs:/var/logs/Servatrice
             - type: bind
-                - source: ./Servatrice
-                - target: /root/.local/share/Cockatrice/Servatrice/servatrice.ini
+                source: ./Servatrice
+                target: /root/.local/share/Cockatrice/Servatrice/servatrice.ini
         restart: unless-stopped
         logging:
             options:
