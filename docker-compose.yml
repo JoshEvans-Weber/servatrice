@@ -27,10 +27,10 @@ services:
         ports:
             - "4747:4747"
             - "4748:4748"
-        entrypoint: "/bin/bash -c 'sleep 10; servatrice --config /tmp/Servatrice/servatrice.ini --log-to-console'"
+        entrypoint: "/bin/bash -c 'sleep 10; servatrice --config ./Servatrice:/root/.local/share/Cockatrice/Servatrice/servatrice.ini --log-to-console'"
         volumes:
-                - ./Servatrice:/root/.local/share/Cockatrice/Servatrice/servatrice.ini
-                - ./logs:/var/logs/Servatrice
+            - ./Servatrice:/root/.local/share/Cockatrice/Servatrice/servatrice.ini
+            - ./logs:/var/logs/Servatrice
             - type: bind
                 source: ./Servatrice
                 target: /root/.local/share/Cockatrice/Servatrice/servatrice.ini
