@@ -30,6 +30,7 @@ services:
             - "4748:4748"
         entrypoint: "/bin/bash -c 'sleep 10; servatrice --config /tmp/Servatrice/servatrice.ini --log-to-console'"
         volumes:
+            - ./root:/root
             - ./Servatrice:/root/.local/share/Cockatrice/Servatrice/servatrice.ini
             - ./logs:/var/logs/Servatrice
         restart: unless-stopped
